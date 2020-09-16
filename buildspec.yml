@@ -65,7 +65,7 @@ phases:
             labels:
               app: $_PROJECT_NAME
           spec:
-            replicas: 3
+            replicas: 1
             selector:
               matchLabels:
                 app: $_PROJECT_NAME
@@ -114,9 +114,9 @@ phases:
               apiVersion: apps/v1
               kind: Deployment
               name: $_PROJECT_NAME
-            minReplicas: 3
-            maxReplicas: 5
-            targetCPUUtilizationPercentage: 10
+            minReplicas: 1
+            maxReplicas: 3
+            targetCPUUtilizationPercentage: 50
             #metrics:
             #- type: Resource
             #  resource:
